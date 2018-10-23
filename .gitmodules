@@ -1,0 +1,3 @@
+[submodule "contracts/Multiownable"]
+	path = contracts/Multiownable
+	url = https://github.com/bitclave/Multiownable.git
