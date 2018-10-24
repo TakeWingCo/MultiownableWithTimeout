@@ -1,7 +1,7 @@
 pragma solidity ^0.4.24;
 
 
-import "/home/ganzz/takewing/MultiownableWithTimeout/contracts/Multiownable/contracts/Multiownable.sol";
+import "./Multiownable/contracts/Multiownable.sol";
 
 
 // Multiownable contract with timeout for every function.
