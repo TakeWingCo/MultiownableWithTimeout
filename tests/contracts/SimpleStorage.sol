@@ -16,12 +16,12 @@ contract SimpleStorage is MultiownableWithTimeout
         value = newValue;
     }
 
-    function setByVoters(uint newValue) onlyManyOwners() public
+    function setByVoters(uint newValue) onlyAllOwners() public
     {
         value = newValue;
     }
 
-    function setByVotersWithTimeout(uint newValue) NotExpired(timeout) onlyManyOwners() public
+    function setByVotersWithTimeout(uint newValue) NotExpired(timeout) onlyAllOwners() public
     {
         value = newValue;
     }
