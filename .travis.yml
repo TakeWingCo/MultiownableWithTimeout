@@ -11,9 +11,11 @@ install:
   - sudo apt-get install solc -y
   - sudo apt-get install ethereum -y
 before_script:
-    geth --dev --rpc --rpccorsdomain "http://localhost:8545" --rpcapi="db,eth,net,web3,personal,web3" --targetgaslimit '9000000'
+    geth --dev --rpc --rpccorsdomain "http://localhost:8545" --rpcapi="db,eth,net,web3,personal,web3" --targetgaslimit '9000000' &
 script:
     bash scripts/build.sh
+    cd tests
+    python3 -W ignore Multiownable.py
 after_script:
     pkill geth
     
