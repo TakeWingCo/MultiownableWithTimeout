@@ -4,9 +4,9 @@ python:
   - "3.6"
 install:
   - pip3 install web3==3.16.5
-  - sudo add-apt-repository ppa:ethereum/ethereum
-  - sudo apt-get update
-  - sudo apt-get install solc
+  - sudo add-apt-repository ppa:ethereum/ethereum -y
+  - sudo apt-get update -q
+  - sudo apt-get install solc -y
 script:
     bash scripts/build.sh
 
