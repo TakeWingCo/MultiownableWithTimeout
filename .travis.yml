@@ -1,8 +1,12 @@
+sudo: required
 language: python
 python: 
   - "3.6"
 install:
   - pip3 install web3==3.16.5
+  - sudo add-apt-repository ppa:ethereum/ethereum
+  - sudo apt-get update
+  - sudo apt-get install solc
 script:
     bash scripts/build.sh
 
